@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Home - Champiao Cloud Solutions</title>
+    {{template "jivo.html" . }}
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Menu de Navegação -->
+    {{template "nav.html" . }}
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow container mx-auto p-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Bem-vindo à Champiao Cloud Solutions!</h2>
+        <p class="text-lg text-center mb-4">Ajudamos empresas a otimizar seus processos com soluções em tecnologia de ponta.</p>
+
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-xl font-semibold">Soluções em Nuvem</h3>
+                <p>Transforme seu negócio com nossas soluções em nuvem escaláveis e seguras.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-xl font-semibold">Consultoria de TI</h3>
+                <p>Nossos especialistas estão prontos para ajudar você a tomar decisões informadas em tecnologia.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-xl font-semibold">Suporte Técnico</h3>
+                <p>Oferecemos suporte técnico 24/7 para garantir que sua tecnologia funcione perfeitamente.</p>
+            </div>
+        </div>
+    </main>
+    <main class="flex-grow container mx-auto p-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Nossos Serviços</h2>
+        <p class="text-lg text-center mb-4">Aqui são alguns dos nossos Serviços.</p>
+
+        <!-- Blocos de Trabalho -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Planejamento de Infraestrutura em cloud</h3>
+                <p class="text-gray-700">Fazemos o planejamento de infraestrutura em nuvem e seguramente encontraremos o melhor custo-benefício para hospedar sua aplicação em pouco tempo.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Construção e administração de infraestrutura em nuvem</h3>
+                <p class="text-gray-700">Construímos e administramos infraestruturas em nuvem, garantindo escalabilidade, segurança e eficiência. Nossas soluções são adaptadas às necessidades do cliente, com foco em desempenho e otimização de custos.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Segurança de infraestrutura</h3>
+                <p class="text-gray-700">oferecemos soluções completas para segurança de infraestrutura, protegendo ambientes físicos e em nuvem. Implementamos estratégias de defesa, monitoramento contínuo e respostas rápidas a incidentes, garantindo a integridade dos sistemas e a segurança dos dados.</p>
+            </div>
+        </div>
+    </main>
+    <main class="flex-grow container mx-auto p-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Nossos Parceiros</h2>
+        <p class="text-lg text-center mb-4">Aqui são alguns dos nossos Parceiros.</p>
+
+        <!-- Blocos de Parceiros -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 max-w-7xl max-h-auto">
+            <a href="https://go.oracle.com/LP=143903?src1=:ad:pas:go:dg:a_lad:l5:RC_GOOG220512P00038C04979:MainAd&gclsrc=aw.ds&gad_source=1&gclid=EAIaIQobChMIpujk9O3wiAMVw8zCBB1pyRvoEAAYASAAEgIuqPD_BwE">
+                <div class="bg-#f8f8f8 p-4 rounded-lg  flex flex-col items-center justify-between h-64 w-64">
+                    <img src="/public/src/imgs/oracle.png" alt="Logo" class=" max-w-auto max-h-auto mr-2 mb-2">
+                    <h3 class="text-xl font-semibold mb-2">Oracle Cloud Infraestructure</h3>
+                </div>
+            </a>
+            <a href="https://azure.microsoft.com/pt-br/pricing/purchase-options/azure-account" target="_blank">
+                <div class="bg-#f8f8f8 p-4 rounded-lg  flex flex-col items-center justify-between h-64 w-64">
+                    <img src="/public/src/imgs/microsoft.png" alt="Logo" class="max-w-auto max-h-auto mr-2 mb-2">
+                    <h3 class="text-xl font-semibold mb-2 flex items-center justify-center h-48 w-64 ">Microssoft Azure</h3>
+                </div>
+            </a>
+            <a href="https://console.aws.amazon.com" target="_blank">
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-between h-64 w-64">
+                    <img src="/public/src/imgs/aws.png" alt="Logo" class="max-w-auto max-h-auto mr-2 mb-2">
+                    <h3 class="text-xl font-semibold mb-2 flex items-center justify-center h-48 w-64">Amazon Web Services</h3>
+                </div>
+            </a>
+        </div>
+
+    {{template "footer.html" . }}
+
+</body>
+</html>
