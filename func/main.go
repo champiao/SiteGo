@@ -16,6 +16,7 @@ func SendEmail(c *gin.Context, name string, email string, message string, phone 
 	errEnv := godotenv.Load()
 	if errEnv != nil {
 		log.Fatal("env file not found")
+		return errEnv
 	}
 	m := mail.NewMessage()
 	m.SetHeader("From", getEnv("EMAIL_USER", "champiao@champiao.com.br"))
