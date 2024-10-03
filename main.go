@@ -34,8 +34,11 @@ func main() {
 		}
 
 		// Defina os cabeçalhos apropriados para enviar um PDF
-		c.Header("Content-Disposition", "inline; filename=certificado.pdf")
+		c.Header("Content-Disposition", "inline; filename=Certificado_Alura.pdf")
 		c.Data(http.StatusOK, "application/pdf", pdfBytes)
+	})
+	r.GET("/certificates", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "certificados.html", nil)
 	})
 
 	r.POST("/contact", func(c *gin.Context) {
