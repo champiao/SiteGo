@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	SendEmail "champiao/func/mail"
 
@@ -24,6 +25,17 @@ func main() {
 
 	r.GET("/contact", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "contact.html", nil)
+	})
+	r.GET("/aluraCerts", func(c *gin.Context) {
+		pdfBytes, err := os.ReadFile("public/certs/Certificado_Alura.pdf")
+		if err != nil {
+			c.String(http.StatusInternalServerError, "Erro ao exibir o certificado Alura")
+			return
+		}
+
+		// Defina os cabeçalhos apropriados para enviar um PDF
+		c.Header("Content-Disposition", "inline; filename=certificado.pdf")
+		c.Data(http.StatusOK, "application/pdf", pdfBytes)
 	})
 
 	r.POST("/contact", func(c *gin.Context) {
