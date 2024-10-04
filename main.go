@@ -32,8 +32,6 @@ func main() {
 			c.String(http.StatusInternalServerError, "Erro ao exibir o certificado Alura")
 			return
 		}
-
-		// Defina os cabeçalhos apropriados para enviar um PDF
 		c.Header("Content-Disposition", "inline; filename=Certificado_Alura.pdf")
 		c.Data(http.StatusOK, "application/pdf", pdfBytes)
 	})
@@ -49,7 +47,7 @@ func main() {
 		sendEmail(c, name, email, message, phone)
 	})
 
-	r.LoadHTMLGlob("public/views/*")
+	r.LoadHTMLGlob("public/views/*.html")
 
 	r.Run(":8080")
 }
