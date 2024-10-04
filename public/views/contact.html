@@ -3,7 +3,7 @@
 
     {{template "nav.html" . }}
 
-    <main class="flex-grow container mx-auto p-6">
+    <main class="flex-grow container mx-auto">
         <!-- <h4 class="text-3xl font-bold text-center mb-3">Entre em contato com nossa equipe</h2> -->
         {{if .error}}
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-3" role="alert">
@@ -17,7 +17,7 @@
         </div>
         {{end}}
         <form class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto" action="/contact" method="POST">
-            <div class="mb-4">
+            <div class="">
                 <label for="name" class="block text-sm font-bold mb-2">Nome:</label>
                 <input type="text" id="name" name="name" class="border border-gray-300 p-2 w-full rounded" required>
             </div>
