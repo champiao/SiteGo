@@ -1,12 +1,67 @@
-{{define "nav.html"}}
 <nav class="bg-blue-600 p-4">
-    <div class="container mx-auto flex justify-between items-center  max-h-auto">
-        <a href="/" class="text-white hover:underline"><img src="/public/src/imgs/logo.png" alt="Logo" class="max-w-auto max-h-auto mr-2" style="height: 120px"></a>
-        <ul class="flex space-x-4">
-            <li><a href="/about" class="text-white hover:underline"><button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Sobre</button></a></li>
-            <li><a href="/contact" class="text-white hover:underline"><button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Contato</button></a></li>
-            <li><a href="/certificates" class="text-white hover:underline"><button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Certificados</button></a></li>
+    <div class="container mx-auto flex justify-between items-center max-h-auto">
+        <!-- Logo -->
+        <a href="/" class="text-white hover:underline">
+            <img src="/public/src/imgs/logo.png" alt="Logo" class="max-w-auto max-h-auto mr-2" style="height: 120px">
+        </a>
+
+        <!-- Ícone de Menu (Mobile) -->
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu (Desktop) -->
+        <ul id="menu" class="hidden lg:flex space-x-4">
+            <li>
+                <a href="/about" class="text-white hover:underline">
+                    <button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Sobre</button>
+                </a>
+            </li>
+            <li>
+                <a href="/contact" class="text-white hover:underline">
+                    <button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Contato</button>
+                </a>
+            </li>
+            <li>
+                <a href="/certificates" class="text-white hover:underline">
+                    <button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Certificados</button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Menu (Mobile) -->
+    <div id="mobile-menu" class="hidden lg:hidden">
+        <ul class="flex flex-col space-y-2 mt-4">
+            <li>
+                <a href="/about" class="text-white hover:underline">
+                    <button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Sobre</button>
+                </a>
+            </li>
+            <li>
+                <a href="/contact" class="text-white hover:underline">
+                    <button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Contato</button>
+                </a>
+            </li>
+            <li>
+                <a href="/certificates" class="text-white hover:underline">
+                    <button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Certificados</button>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
-{{end}}
+
+<!-- Script para alternar o menu mobile -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
