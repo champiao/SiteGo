@@ -8,25 +8,44 @@
 
     <!-- Conteúdo Principal -->
     <main class="flex-grow container mx-auto p-6">
-        <h2 class="text-3xl font-bold text-center mb-6">Sobre Nós</h2>
-        <p class="text-lg text-center mb-4">Na Champiao Cloud Solutions, oferecemos soluções tecnológicas inovadoras para ajudar nossos clientes a prosperar no mundo digital.</p>
+        <h2 class="text-4xl font-bold text-center text-blue-900 mb-8">Sobre Nós</h2>
         
-        <!-- Blocos de Trabalho -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Serviço 1</h3>
-                <p class="text-gray-700">Descrição do serviço 1 que mostra como ajudamos os nossos clientes a alcançar seus objetivos.</p>
+        <p class="text-lg text-center mb-6 text-gray-800">
+            Na <span class="font-semibold text-blue-700">Champiao Cloud Solutions</span>, oferecemos soluções tecnológicas inovadoras para ajudar nossos clientes a prosperar no mundo digital.
+        </p>
+        
+        <!-- Seção de Sobre a Empresa -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-blue-700 mb-4">Sobre Champiao Cloud Solutions</h3>
+            <p class="text-gray-700 text-lg leading-relaxed">
+                Fundada em 2022, nossa empresa de consultoria é especializada em soluções de cloud computing e infraestrutura. Atuamos com o objetivo de ajudar empresas de todos os portes — pequenas, médias e grandes — a garantir que seus aplicativos estejam disponíveis na web com segurança, escalabilidade e confiabilidade.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mt-4">
+                Com uma abordagem personalizada, trabalhamos lado a lado com nossos clientes para entender suas necessidades específicas e implementar as melhores práticas em tecnologia de nuvem, garantindo que suas operações online sejam ágeis e robustas. Seja migrando sistemas para a nuvem, otimizando a infraestrutura existente ou fortalecendo a segurança digital, estamos comprometidos em entregar soluções eficientes e de alto desempenho.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mt-4">
+                Nosso foco é assegurar que sua empresa aproveite ao máximo os benefícios da tecnologia de ponta, com um suporte especializado e contínuo para garantir uma operação sem interrupções e preparada para o futuro.
+            </p>
+        </div>
+        
+        <!-- Blocos de Trabalho (opcional, caso queira detalhar serviços ou portfólio) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">Soluções em Cloud</h4>
+                <p class="text-gray-700">
+                    Implementamos e gerenciamos soluções em nuvem, garantindo que seus aplicativos estejam disponíveis com a máxima performance e segurança.
+                </p>
             </div>
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Serviço 2</h3>
-                <p class="text-gray-700">Descrição do serviço 2 e como ele se destaca no mercado.</p>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Serviço 3</h3>
-                <p class="text-gray-700">Descrição do serviço 3, destacando suas principais características e benefícios.</p>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="text-xl font-semibold text-blue-700 mb-2">Infraestrutura Escalável</h4>
+                <p class="text-gray-700">
+                    Criamos infraestruturas sob medida, permitindo que sua empresa escale com segurança e eficiência, adaptando-se às demandas do mercado.
+                </p>
             </div>
         </div>
     </main>
+    
+    <!-- Rodapé -->
     {{template "footer.html" . }} 
 
 </body>
