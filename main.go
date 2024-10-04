@@ -61,7 +61,7 @@ func sendEmail(c *gin.Context, name string, email string, message string, phone 
 		})
 		fmt.Printf("erro: %s", send)
 		return
-	} else if send == nil {
+	} else {
 		c.Redirect(http.StatusMovedPermanently, "/contact")
 		c.HTML(http.StatusOK, "contact.html", gin.H{
 			"error":   "",
