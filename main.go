@@ -5,8 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	SendEmail "champiao/func/mail"
-
+	datahelper "champiao/func/mail"
 	"github.com/gin-gonic/gin"
 )
 
@@ -49,11 +48,13 @@ func main() {
 
 	r.LoadHTMLGlob("public/views/*.html")
 
-	r.Run(":8080")
+	if err := r.Run("0.0.0.0:" + datahelper.GetEnv("APP_PORT", "8080")); err != nil {
+		fmt.Println(err)
+	}
 }
 
 func sendEmail(c *gin.Context, name string, email string, message string, phone string) {
-	send := SendEmail.SendEmail(c, name, email, message, phone)
+	send := datahelper.SendEmail(name, email, message, phone)
 	if send != nil {
 		c.HTML(http.StatusBadRequest, "contact.html", gin.H{
 			"error":   "Ocorreu um erro ao tentar enviar o formulário",
